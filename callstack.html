@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>javascript arrays</h2>
+        <p>do a calculation then display the result</p>
+        <p id="demo"></p>       <!--used to display the result-->
+
+        <script>
+            function add(a,b){
+                return a+b;   //this wil return with the result to the output <p> tag
+            }
+            function average(a,b){
+                return add(a,b)/2;
+            }
+            let result = average(145,25);
+            document.getElementById("demo").innerHTML=result;
+        </script>
+    </body>
+</html>
