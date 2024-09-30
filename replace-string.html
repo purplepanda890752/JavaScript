@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>String replace methods</h2>
+        <p>search a string for "doing", display the postion of the 
+            match and replace the word with any word you require and display
+        </p>
+        <p id="search"></p>
+        <p id="replace"></p>
+        <p id="display"></p>
+        <script>
+            var str="hello how are you doing";
+            var searchpos=str.search("doing");
+            var txt=str.replace("how are you", "What are you");
+            var x=70;
+            var y=80;
+            document.getElementById("search").innerHTML=searchchpos;
+            document.getElementById("result").innerHTML=txt;
+            document.getElementById("result").innerHTML=String(x)+String(y);
+        </script>
+    </body>
+</html>
