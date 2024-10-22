@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers, Date, and Rounded Number</title>
+</head>
+<body>
+    <h1>Random Numbers, Current Date, and Rounded Number</h1>
+
+    <button onclick="generateRandomNumbers()">Generate Random Numbers</button>
+
+    <p id="randomNumbers"></p>
+    <p id="currentDate"></p>
+    <p id="roundedNumber"></p>
+
+    <script>
+        function generateRandomNumbers() {
+            let numbers = [];
+            for (let i = 0; i < 5; i++) {
+                let randomNum = Math.random() * 100; 
+                numbers.push(randomNum.toFixed(2));
+            }
+            document.getElementById('randomNumbers').textContent = 'Random Numbers: ' + numbers.join(', ');
+
+            let currentDate = new Date();
+            document.getElementById('currentDate').textContent = 'Current Date: ' + currentDate.toLocaleString();
+
+            let numberToRound = Math.random() * 100;
+            let roundedNumber = Math.round(numberToRound);
+            document.getElementById('roundedNumber').textContent = `Rounded Number (${numberToRound.toFixed(2)}): ${roundedNumber}`;
+        }
+    </script>
+</body>
+</html>
