@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Form</h1>
+        <input type="text" id="name" placeholder="Enter your name" required />
+        <input type="number" id="age" placeholder="Enter your age" required />
+        <button onclick="validateForm()">Login</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const age = parseInt(document.getElementById('age').value);
+            const messageElement = document.getElementById('message');
+
+            messageElement.textContent = '';
+
+            if (!name) {
+                messageElement.textContent = 'Please enter your name.';
+                return;
+            }
+
+            if (age < 18) {
+                messageElement.textContent = 'You must be at least 18 years old to login.';
+                return;
+            }
+
+            messageElement.textContent = 'Login successful! Welcome, ' + name + '!';
+        }
+    </script>
+</body>
+</html>
