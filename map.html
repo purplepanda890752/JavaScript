@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Mapping and Sorting</title>
+</head>
+<body>
+    <h1>Array Mapping and Sorting Example</h1>
+
+    <button onclick="processArray()">Process Array</button>
+
+    <p id="mappedArray"></p>
+    <p id="sortedArrayAsc"></p>
+    <p id="sortedArrayDesc"></p>
+
+    <script>
+        const numbers = [5, 2, 8, 1, 10, 4];
+
+        function processArray() {
+            const mappedArray = numbers.map(num => num * 2);
+            document.getElementById('mappedArray').textContent = 'Mapped Array: ' + mappedArray.join(', ');
+
+            const sortedArrayAsc = [...mappedArray].sort((a, b) => a - b);
+            document.getElementById('sortedArrayAsc').textContent = 'Sorted Array (Ascending): ' + sortedArrayAsc.join(', ');
+
+            const sortedArrayDesc = [...mappedArray].sort((a, b) => b - a);
+            document.getElementById('sortedArrayDesc').textContent = 'Sorted Array (Descending): ' + sortedArrayDesc.join(', ');
+        }
+    </script>
+</body>
+</html>
