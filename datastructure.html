@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object and Array Example</title>
+</head>
+<body>
+    <h1>Display Object and Array Values</h1>
+
+    <button onclick="displayData()">Display Data</button>
+
+    <p id="objectResult"></p>
+    <p id="arrayResult"></p>
+    <p id="modifiedArray"></p>
+
+    <script>
+        const person = { name: 'John', age: 30, city: 'New York' };
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+
+        function displayData() {
+            const objectResult = `Name: ${person.name}, Age: ${person.age}, City: ${person.city}`;
+            document.getElementById('objectResult').textContent = objectResult;
+
+            const arrayResult = `First fruit: ${fruits[0]}, Second fruit: ${fruits[1]}, Third fruit: ${fruits[2]}`;
+            document.getElementById('arrayResult').textContent = arrayResult;
+
+            fruits.pop(); 
+            const modifiedArray = fruits.join(', '); 
+            document.getElementById('modifiedArray').textContent = 'Modified Array: ' + modifiedArray;
+        }
+    </script>
+</body>
+</html>
