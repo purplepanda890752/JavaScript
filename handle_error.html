@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling Example</title>
+</head>
+<body>
+    <h1>Error Handling with Try and Catch</h1>
+
+    <button onclick="triggerError()">Trigger Error</button>
+    <p id="errorMessage"></p>
+
+    <script>
+        function triggerError() {
+            try {
+                nonExistentFunction();
+            } catch (error) {
+                document.getElementById('errorMessage').textContent = 
+                    'An error occurred: ' + error.message;
+            } finally {
+                console.log('Error handling completed.');
+            }
+        }
+    </script>
+</body>
+</html>
