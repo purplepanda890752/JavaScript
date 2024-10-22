@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Arguments and Trigonometric Values</title>
+</head>
+<body>
+    <h1>Sum of Arguments and Trigonometric Values</h1>
+
+    <button onclick="displayResults()">Calculate</button>
+
+    <p id="sumResult"></p>
+    <p id="trigResults"></p>
+
+    <script>
+        function sumOfArguments(...args) {
+            return args.reduce((acc, current) => acc + current, 0);
+        }
+
+        function calculateTrig(degree) {
+            const radian = degree * (Math.PI / 180); 
+            return {
+                sin: Math.sin(radian).toFixed(2),
+                cos: Math.cos(radian).toFixed(2),
+                tan: Math.tan(radian).toFixed(2)
+            };
+        }
+
+        function displayResults() {
+            const sum = sumOfArguments(10, 20, 30, 40);
+            document.getElementById('sumResult').textContent = 'Sum of Arguments: ' + sum;
+
+            const degree = 45; 
+            const trigValues = calculateTrig(degree);
+            document.getElementById('trigResults').textContent = `Trigonometric values for ${degree} degrees: 
+                sin = ${trigValues.sin}, cos = ${trigValues.cos}, tan = ${trigValues.tan}`;
+        }
+    </script>
+</body>
+</html>
