@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers Using While Loop</title>
+</head>
+<body>
+    <h1>Random Numbers</h1>
+    <button onclick="generateRandomNumbers()">Generate Numbers</button>
+
+    <p id="randomNumbers"></p>
+
+    <script>
+        function generateRandomNumbers() {
+            let numbers = [];
+            let count = 0;
+
+            while (count < 5) {
+                let randomNum = Math.random() * 100; 
+                randomNum = randomNum.toFixed(2);
+                numbers.push(randomNum); 
+                count++; 
+            }
+
+            document.getElementById('randomNumbers').textContent = 'Generated Random Numbers: ' + numbers.join(', ');
+        }
+    </script>
+</body>
+</html>
