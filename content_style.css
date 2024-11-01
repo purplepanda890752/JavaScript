@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: beige;
+}
+
+.cover{
+    background-image: url('pizza.jpeg');
+    height: 400px;
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section{
+    text-align: left;
+    padding: 50px 80px;
+    background-color:brown;
+    color: aliceblue;
+}
+
+P{
+    font-size: 20px;
+    text-align: left;
+}
