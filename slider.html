@@ -1,42 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial scale= 1.0">
-        <title>Slider</title>
-        <style>
-            body{
-                background-color: aqua;
-            }
-
-            h1{
-                text-align: center;
-                text-decoration: underline;
-                text-transform: capitalize;
-            }
-
-            .carousel-container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 300px;
-            }
-
-            .myslides{
-                display: none;
-                max-height: 100%;
-                max-width: 100%;
-            }
-        </style>
-    </head>
-
     <body>
-        <h1>My fav place</h1>
-
-        <div class="carousel-container">
-            <img class="myslides" src=" " height="300" width="300" alt="pic1">
-            <img class="myslides" src=" " height="300" width="300" alt="pic2">
-            <img class="myslides" src=" " height="300" width="300" alt="pic3">
-        </div>
+        <section>
+            <img class="myslides" src="brownies.jpeg" style="height:500px">
+            <img class="myslides" src="pizza.jpeg" style="height:500px">
+        </section>
+        <script>
+            var myIndex=0;
+            carousel();
+            function carousel (){
+                var i;
+                var x= document.getElementsByClassName("myslides");
+                for(i=0, i<x.length; i++){
+                    x[i].style.display="none";
+                }
+                myIndex++;
+                if(myIndex>x.length){myIndex=1}
+                x[myIndex-1].style.display="block";
+                setTimeout(carousel,3000);
+            }
+        </script>
     </body>
 </html>
