@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Website</title>
+        <link rel="stylesheet" href="contentstyle.css">
+    </head>
+
+    <body>
+        <div class="topnav">
+            <a href="index.html">home</a>
+            <a class="active" href="about.html">about</a>
+            <a href="contactme.html">contactme</a>
+            <a href="website.html">gallery</a>
+        </div>
+
+        <section>
+            <img class="myslides" src="brownies.jpeg" style="height:500px">
+            <img class="myslides" src="pizza.jpeg" style="height:500px">
+        </section>
+        <script>
+            var myIndex=0;
+            carousel();
+            function carousel (){
+                var i;
+                var x= document.getElementsByClassName("myslides");
+                for(i=0; i<x.length; i++){
+                    x[i].style.display="none";
+                }
+                myIndex++;
+                if(myIndex>x.length){myIndex=1}
+                x[myIndex-1].style.display="block";
+                setTimeout(carousel,3000);
+            }
+        </script>
+
+        <p>Brownies were created in the late 19th century by accident when a baker forgot to add baking powder,
+             resulting in a dense, fudgy treat that quickly became a beloved dessert!Brownies became popular in the early 20th century when a Chicago baker added melted chocolate to a cookie recipe, creating a rich, 
+             chewy dessert that's now enjoyed worldwide in many variations!In 1893, the first published brownie recipe appeared in the "Boston Cooking School Cook Book," with a unique ingredient: unsweetened chocolate, 
+             which gives brownies their signature rich, decadent flavor.</p>
+
+             <p>Pizza originated in Italy, but the first pizzeria in the U.S. opened in 1905 in New York.
+                 Today, more than 3 billion pizzas are sold worldwide every year!The world’s largest pizza, measuring 1261.65 square meters, was made in Rome in 2012.
+                  It was called “Ottavia” and was gluten-free to promote health-conscious eating alongside its massive size!Pizza was originally a street food in Naples, Italy, served to the poor. 
+                  It became globally popular after World War II, especially after American soldiers tasted it while stationed in Italy!</p>
+    </body>
+</html>
