@@ -1,0 +1,20 @@
+function calculatePerimeter(shape, dimensions) {
+    switch (shape.toLowerCase()) {
+        case 'square':
+            return 4 * dimensions.side;
+        case 'rectangle':
+            return 2 * (dimensions.length + dimensions.width);
+        case 'triangle':
+            return dimensions.sideA + dimensions.sideB + dimensions.sideC;
+        case 'circle':
+            return 2 * Math.PI * dimensions.radius;
+        default:
+            return 'Invalid shape';
+    }
+}
+
+// Example usage:
+console.log(calculatePerimeter('square', { side: 5 })); // 20
+console.log(calculatePerimeter('rectangle', { length: 10, width: 5 })); // 30
+console.log(calculatePerimeter('triangle', { sideA: 3, sideB: 4, sideC: 5 })); // 12
+console.log(calculatePerimeter('circle', { radius: 7 })); // 43.98
