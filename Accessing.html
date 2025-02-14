@@ -1,0 +1,18 @@
+// Creating an array of objects
+let people = [
+  { name: "Alice", age: 25, occupation: "Engineer" },
+  { name: "Bob", age: 30, occupation: "Doctor" },
+  { name: "Charlie", age: 35, occupation: "Teacher" }
+];
+
+// Displaying object properties using keys
+console.log("Displaying using keys:");
+people.forEach(person => {
+  console.log(`Name: ${person.name}, Age: ${person.age}, Occupation: ${person.occupation}`);
+});
+
+// Displaying whole array by index value
+console.log("\nDisplaying whole array by index:");
+people.forEach((person, index) => {
+  console.log(`Index ${index}:`, person);
+});
